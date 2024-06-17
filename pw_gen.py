@@ -6,3 +6,9 @@ def generate_password(len_password):
     password_output = ""
 
 
+def main():
+    password = generate_password(5)
+    print(password)
+
+
+main()
