@@ -18,8 +18,15 @@ def generate_password(len_password):
 
 
 def main():
-    password = generate_password(10)
-    print(password)
+    try:
+        user_input = input("Enter password length: ")
+        password = generate_password(int(user_input))
+
+        if password:
+            print(f'Passowrd: "{password}"')
+
+    except ValueError:
+        print("PLEASE ENTER A VALID NUMBER.")
 
 
 main()
