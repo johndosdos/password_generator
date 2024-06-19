@@ -1,12 +1,9 @@
 import secrets
+import string
 
 
 def generate_password(len_password):
-    sequence_map = {
-        "lower_case": "abcdefghijklmnopqrstuvwxyz",
-        "upper_case": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-        "numbers": "0123456789",
-    }
+    sequence_map = {"0": string.ascii_letters, "1": string.digits}
 
     password_output = ""
 
