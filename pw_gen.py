@@ -26,4 +26,5 @@ def main():
         print("PLEASE ENTER A VALID NUMBER.")
 
 
-main()
+if __name__ == "__main__":
+    main()
