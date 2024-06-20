@@ -53,7 +53,7 @@ def main():
                 password = generate_password(int(user_input))
 
                 if password:
-                    print(f" Password: {password}")
+                    print(f" Password: {password}\n")
                     break
                 else:
                     print(" Password generation failed.")
