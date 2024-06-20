@@ -2,6 +2,21 @@ import secrets
 import string
 
 
+def intro():
+    print(
+        """
+ ========================================= 
+|    _ ____      __     __ _  ___ _ __    |
+|   | '_ \ \ /\ / /    / _` |/ _ \ '_ \   |
+|   | |_) \ V  V /    | (_| |  __/ | | |  |
+|   | .__/ \_/\_/      \__, |\___|_| |_|  |
+|   | |                 __/ |             |
+|   |_|                |___/              |
+ =========================================
+"""
+    )
+
+
 def generate_password(len_password):
     sequence_map = {"0": string.ascii_letters, "1": string.digits}
 
@@ -15,6 +30,8 @@ def generate_password(len_password):
 
 
 def main():
+    intro()
+
     while True:
         try:
             user_input = input("Enter password length: ")
