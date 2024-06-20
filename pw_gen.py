@@ -1,5 +1,6 @@
 import secrets
 import string
+import os
 
 
 def intro():
@@ -39,6 +40,8 @@ def generate_password(len_password):
 
 
 def main():
+    os.system("clear")
+
     intro()
 
     min_pw_length = 8
