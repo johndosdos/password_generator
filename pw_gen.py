@@ -32,22 +32,26 @@ def generate_password(len_password):
 def main():
     intro()
 
+    min_pw_length = 8
+
     while True:
         try:
-            user_input = input("Enter password length: ")
-            if int(user_input) >= 8:
+            user_input = input("Please enter desired password length: ")
+            if int(user_input) >= min_pw_length:
                 password = generate_password(int(user_input))
 
                 if password:
-                    print(f'Password: "{password}"')
+                    print(f" Password: {password}")
                     break
                 else:
-                    print("Password generation failed.")
+                    print(" Password generation failed.")
+            elif int(user_input) < 1:
+                print(" Error: Password could not be less than 0")
             else:
-                print("REQUIRED MINIMUM CHARACTERS: 8")
+                print(f" Try Again. Required minimum characters: {min_pw_length}")
 
         except ValueError:
-            print("PLEASE ENTER A VALID NUMBER.")
+            print("Please enter a valid number.")
 
 
 if __name__ == "__main__":
