@@ -22,9 +22,18 @@ def generate_password(len_password):
 
     password_output = ""
 
+    dash_counter = 0
+
     for i in range(len_password):
         sequence = secrets.choice(list(sequence_map.keys()))
         password_output += secrets.choice(sequence_map[sequence])
+
+        dash_counter += 1
+
+        # for every 4 characters, we append a dash
+        if dash_counter % 4 == 0 and i < len_password - 1:
+            password_output += "-"
+            dash_counter = 0
 
     return password_output
 
