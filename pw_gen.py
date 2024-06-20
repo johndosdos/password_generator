@@ -16,11 +16,16 @@ def generate_password(len_password):
 
 def main():
     try:
-        user_input = input("Enter password length: ")
-        password = generate_password(int(user_input))
+        while True:
+            user_input = input("Enter password length: ")
+            if int(user_input) >= 8:
+                password = generate_password(int(user_input))
 
-        if password:
-            print(f'Passowrd: "{password}"')
+                if password:
+                    print(f'Passowrd: "{password}"')
+                    break
+            else:
+                print("REQUIRED MINIMUM CHARACTERS: 8")
 
     except ValueError:
         print("PLEASE ENTER A VALID NUMBER.")
